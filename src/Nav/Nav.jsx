@@ -12,14 +12,16 @@ const Nav = () => {
     ];
     return (
         <nav>
-            <div onClick={() => setOpen(!open)}>
+            <div onClick={() => setOpen(!open)} className="bg-red-200 p-4 ">
                 {
                     open === true ? <IoIosCloseCircleOutline className="text-2xl"></IoIosCloseCircleOutline>
                         : <HiOutlineMenuAlt1 className="text-2xl md:hidden"></HiOutlineMenuAlt1>
                 }
 
             </div>
-            <ul className="md:flex gap-10">
+            <ul className={`md:flex w-full gap-10 absolute md:static p-4 bg-fuchsia-100
+            ${open ? 'top-16' : '-top-36'} px-8 duration-1000 
+            `}>
                 {
                     routes.map(route => <li key={route.id}>
                         <a href={route.path}>{route.name}
