@@ -58,7 +58,7 @@ const PriceOptions = () => {
         <div>
             <h2 className="text-7xl font-bold text-center mt-4">Best price in the town </h2>
 
-            <div className="grid grid-cols-3 gap-6 mt-20">
+            <div className="grid md:grid-cols-3 gap-6 mt-20">
                 {
 
                     priceless.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
